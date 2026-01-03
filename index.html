@@ -63,17 +63,19 @@
       background: linear-gradient(180deg, rgba(14,20,34,.86), rgba(11,16,32,.86));
       box-shadow: var(--shadow);
     }
+    /* No external image dependency: keeps it reliable and clean */
     .hero-media{
-      height:250px;
+      height:210px;
       background:
-        linear-gradient(180deg, rgba(7,10,15,.08), rgba(7,10,15,.82)),
-        url("https://i.vimeocdn.com/video/1862812473-91676efd5cb01a49f8e4ecb317208df70cdb0de544720934d0c944c29694402d-d") center/cover no-repeat;
+        radial-gradient(900px 300px at 20% 35%, rgba(124,92,255,.25), transparent 60%),
+        radial-gradient(900px 300px at 80% 25%, rgba(38,212,255,.18), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.03), rgba(7,10,15,.0));
     }
     .hero-body{padding:20px 20px 22px}
     .kicker{color:var(--muted);font-size:13px;letter-spacing:.35px;text-transform:uppercase}
     h1{margin:10px 0 10px;font-size:36px;line-height:1.1}
     @media (max-width:520px){h1{font-size:31px}}
-    .lead{color:var(--muted);max-width:74ch;margin:0 0 14px;font-size:16.3px}
+    .lead{color:var(--muted);max-width:76ch;margin:0 0 14px;font-size:16.3px}
     .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
@@ -139,6 +141,7 @@
         <a href="#focus">Focus</a>
         <a href="#projects">Projects</a>
         <a href="#method">Method</a>
+        <a href="#services">Services</a>
         <a href="#team">Team</a>
         <a href="#contact">Contact</a>
       </div>
@@ -147,7 +150,7 @@
 
   <div class="wrap">
     <section class="hero">
-      <div class="hero-media" role="img" aria-label="Field landscape"></div>
+      <div class="hero-media" aria-hidden="true"></div>
       <div class="hero-body">
         <div class="kicker">UK & Ireland • Mineral exploration</div>
         <h1>Exploration geology and project development</h1>
@@ -169,8 +172,8 @@
       <div class="card">
         <h3>What we do</h3>
         <p class="muted" style="margin:0;">
-          We work from early-stage targeting through to drill planning: integrating public and historical datasets,
-          collecting new field observations, and testing specific hypotheses with the right level of work.
+          Work from early-stage targeting through to drill planning: integrate public and historical datasets,
+          collect new observations in the field, and test specific hypotheses with appropriately-scaled programmes.
         </p>
         <ul class="bullets">
           <li>Target generation and ranking</li>
@@ -183,8 +186,8 @@
 
       <div class="note">
         <strong>Working principle</strong><br>
-        The story stays grounded: what is known, what is inferred, what would falsify the model, and what the next
-        programme should aim to prove or disprove.
+        Keep the story grounded: what is known, what is inferred, what would falsify the model, and what the next programme
+        should aim to prove or disprove.
       </div>
     </div>
 
@@ -194,7 +197,7 @@
         <h3>Irish Zinc — Duncormick</h3>
         <p class="muted" style="margin:0;">
           Zinc project supported by historical work and a strong dataset base. Current effort is focused on
-          reinterpretation, target ranking, and defining the most efficient follow-up work.
+          reinterpretation, target ranking, and defining efficient follow-up work.
         </p>
         <ul class="bullets">
           <li>Data compilation and reinterpretation</li>
@@ -206,7 +209,7 @@
       <div class="card">
         <h3>Irish Lithium — Kildare & Wicklow</h3>
         <p class="muted" style="margin:0;">
-          Greenfield lithium exploration across prospective ground. The work is staged: regional screening first,
+          Greenfield lithium exploration across prospective ground. Work is staged: regional screening first,
           then detailed follow-up only where the geology supports it.
         </p>
         <ul class="bullets">
@@ -228,19 +231,6 @@
           <li>Work programmes designed around decision points</li>
         </ul>
       </div>
-
-      <div class="card">
-        <h3>Exploration services</h3>
-        <p class="muted" style="margin:0;">
-          Where appropriate, we also provide technical support to partners: GIS, field sampling design, target generation,
-          and project review.
-        </p>
-        <ul class="bullets">
-          <li>Prospecting, mapping, sampling</li>
-          <li>Geochemistry workflows and interpretation</li>
-          <li>GIS deliverables for decision-making</li>
-        </ul>
-      </div>
     </div>
 
     <h2 id="method">Method</h2>
@@ -254,19 +244,49 @@
       <div class="card">
         <h3>2) Data</h3>
         <p class="muted" style="margin:0;">
-          Compile what exists, understand its limitations, then collect new data designed to close specific gaps.
+          Compile what exists, understand limitations, then collect new data designed to close specific gaps.
         </p>
       </div>
       <div class="card">
         <h3>3) Field programme</h3>
         <p class="muted" style="margin:0;">
-          Execute practical mapping and sampling that supports interpretation rather than noise.
+          Execute mapping and sampling that improves interpretation rather than adding noise.
         </p>
       </div>
       <div class="card">
         <h3>4) Decisions</h3>
         <p class="muted" style="margin:0;">
           Define the next step as a decision: proceed, refine, or stop — based on evidence.
+        </p>
+      </div>
+    </div>
+
+    <h2 id="services">Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Technical support (by arrangement)</h3>
+        <p class="muted" style="margin:0;">
+          Where useful to partners, we provide focused technical input without turning the website into a brochure.
+          Typical work includes:
+        </p>
+        <ul class="bullets">
+          <li>Target generation and prospectivity screening (GIS-first)</li>
+          <li>Field programme design: mapping, sampling, QA/QC</li>
+          <li>Geochemical interpretation and anomaly follow-up logic</li>
+          <li>Project review / second-opinion technical notes</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Outputs</h3>
+        <ul class="bullets">
+          <li>Maps (QGIS-ready), figures, and clear target-ranking tables</li>
+          <li>Work programme plans with decision points</li>
+          <li>Short technical memos for partners / internal use</li>
+          <li>Data-room tidy-up (datasets, metadata, GIS structure)</li>
+        </ul>
+        <p class="muted" style="margin:10px 0 0;">
+          If you want a “full consultancy” services page, we can add it later — but this keeps the site clean.
         </p>
       </div>
     </div>
@@ -303,9 +323,7 @@
     <h2 id="contact">Contact</h2>
     <div class="card">
       <h3 style="margin-bottom:6px;">Contact</h3>
-      <p class="muted" style="margin:0 0 12px;">
-        Email is the fastest route.
-      </p>
+      <p class="muted" style="margin:0 0 12px;">Email is the fastest route.</p>
       <div class="btnrow">
         <a class="btn primary" href="mailto:terry@earthsourceltd.com">terry@earthsourceltd.com</a>
       </div>
