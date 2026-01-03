@@ -4,92 +4,78 @@
   <meta charset="utf-8">
   <title>Earth Source Limited</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Earth Source Limited — exploration-focused company advancing a portfolio of mineral projects across the UK and Ireland.">
 
   <style>
+    :root{
+      --bg:#070A0F;
+      --panel:rgba(255,255,255,.03);
+      --line:rgba(255,255,255,.12);
+      --text:#EAF0FF;
+      --muted:#A9B6D6;
+      --accent:#7C5CFF;
+      --accent2:#26D4FF;
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background:#0a0d14;
-      color:#e6ecff;
-      line-height:1.6;
+      background:
+        radial-gradient(900px 520px at 18% 12%, rgba(124,92,255,.16), transparent 60%),
+        radial-gradient(900px 520px at 82% 18%, rgba(38,212,255,.12), transparent 55%),
+        radial-gradient(900px 520px at 50% 86%, rgba(124,92,255,.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.65;
     }
-    .wrap{
-      max-width:900px;
-      margin:0 auto;
-      padding:60px 20px;
+    a{color:inherit;text-decoration:none}
+    a:hover{opacity:.92}
+    .wrap{max-width:980px;margin:0 auto;padding:56px 20px 70px}
+    .topbar{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(7,10,15,.72);
+      border-bottom:1px solid var(--line);
     }
-    h1{font-size:38px;margin-bottom:10px}
-    h2{margin-top:60px;font-size:26px}
-    p{max-width:65ch}
-    .muted{color:#aab3d4}
-    .card{
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:14px;
-      padding:20px;
-      margin:20px 0;
+    .topbar-inner{
+      max-width:980px;margin:0 auto;padding:12px 20px;
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
     }
-    footer{
-      margin-top:80px;
-      padding-top:20px;
-      border-top:1px solid rgba(255,255,255,.12);
-      font-size:14px;
-      color:#9aa3c7;
+    .brand{display:flex;align-items:center;gap:10px;font-weight:750;letter-spacing:.2px}
+    .dot{
+      width:30px;height:30px;border-radius:10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 10px 30px rgba(124,92,255,.25);
     }
-    a{color:#8ea2ff;text-decoration:none}
-    a:hover{text-decoration:underline}
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-
-    <h1>Earth Source Limited</h1>
-    <p class="muted">
-      Exploration-focused mineral projects across the UK and Ireland.
-    </p>
-
-    <h2>Focus</h2>
-    <div class="card">
-      <ul>
-        <li>Critical and base metals</li>
-        <li>UK & Ireland portfolio</li>
-        <li>Early-stage exploration to drill-ready targets</li>
-        <li>Practical fieldwork, geochemistry, geophysics and GIS</li>
-      </ul>
-    </div>
-
-    <h2>Projects</h2>
-    <div class="card">
-      <strong>Irish Zinc — Duncormick</strong><br>
-      Exploration and drill planning across a historic Irish zinc district.
-    </div>
-
-    <div class="card">
-      <strong>Irish Lithium — Kildare & Wicklow</strong><br>
-      Greenfield lithium exploration targeting LCT pegmatite potential.
-    </div>
-
-    <div class="card">
-      <strong>Scottish Copper</strong><br>
-      Appraisal of a historic copper district using modern targeting methods.
-    </div>
-
-    <h2>Team</h2>
-    <div class="card">
-      <strong>Terry Nutkins</strong><br>
-      Exploration geologist with experience across precious, base and critical metals.
-    </div>
-
-    <div class="card">
-      <strong>Calum Dunn</strong><br>
-      Consultant geologist with UK & Ireland experience.
-    </div>
-
-    <div class="card">
-      <strong>Mike Burdon</strong><br>
-      Chemical engineer with commercial and technical natural-resources background.
-    </div>
-
-    <div class="card">
-      <strong>Mark Marshall</strong><br
+    .nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+    .nav a{
+      color:var(--muted);
+      padding:8px 10px;border-radius:12px;
+      border:1px solid transparent;
+    }
+    .nav a:hover{color:var(--text);border-color:rgba(255,255,255,.10);background:rgba(255,255,255,.03)}
+    .hero{
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+      background: linear-gradient(180deg, rgba(14,20,34,.86), rgba(11,16,32,.86));
+      box-shadow: var(--shadow);
+    }
+    .hero-media{
+      height:260px;
+      background:
+        linear-gradient(180deg, rgba(7,10,15,.08), rgba(7,10,15,.82)),
+        url("https://i.vimeocdn.com/video/1862812473-91676efd5cb01a49f8e4ecb317208df70cdb0de544720934d0c944c29694402d-d") center/cover no-repeat;
+    }
+    .hero-body{padding:20px 20px 22px}
+    .kicker{color:var(--muted);font-size:13px;letter-spacing:.35px;text-transform:uppercase}
+    h1{margin:10px 0 10px;font-size:38px;line-height:1.1}
+    @media (max-width:520px){h1{font-size:32px}}
+    .lead{color:var(--muted);max-width:70ch;margin:0 0 14px;font-size:16.5px}
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 12px;border-radius:14px;
+      borde
